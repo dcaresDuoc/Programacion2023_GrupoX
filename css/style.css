@@ -148,7 +148,9 @@ ya que con media q. se adapta a cualquier medida de pantalla pc,telefono,tablets
     align-items: flex-end;
 
 }
-/* .contenido-fondo-intro {
-    text-align: center;
-
-} */
+/* Servicios */
+.servicios {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    grid-template-rows: 200px 800px;
+}
