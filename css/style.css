@@ -19,6 +19,7 @@ html {
     font-size: 62.5%;
     box-sizing: border-box; /*Hack para box models**/
     scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 /* SNI para toda pagina web que realizo sacado de, 
 https: //paulirish.com/2012/box-sizing-border-box-ftw/ */
@@ -163,6 +164,14 @@ ya que con media q. se adapta a cualquier medida de pantalla pc,telefono,tablets
 /* se inserta imagen para dar un poco mas de estetica al inicio de la pagina o fondo */
 .fondo {
     background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.maps {
     background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
