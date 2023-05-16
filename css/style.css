@@ -360,3 +360,21 @@ ya que con media q. se adapta a cualquier medida de pantalla pc,telefono,tablets
 .footer{
     text-align: center;
 }
+
+/* MQ para google maps */
+
+@media (max-width: 768px) {
+    .iframe-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px) {
+    .iframe-container {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

@@ -28,13 +28,13 @@
         </nav>
     </div>
     
-        <section class="maps">
+            <div class="iframe-container">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3330.3870609803253!2d-70.5698666881834!3d-33.41315188069361!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf1a617f081b%3A0xf75b547272796d2a!2sWeWork%20Espacio%20de%20Oficinas%20%26%20Coworking%20Apoquindo!5e0!3m2!1ses!2scl!4v1681749213433!5m2!1ses!2scl"
-                width="1230" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                width="1360" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
-        </section>
+            </div>
 
     <main class="contenedor sombra">        
         <selection id="movete_scroll">
@@ -46,12 +46,12 @@
                 <div class="contenedor-campos">
                     <div class="campo">
                         <label>Nombre</label>
-                        <input class="input-text" type="text" placeholder="Nombre">
+                        <input class="input-text" id="nombre" type="text" placeholder="Nombre">
                     </div>
     
                     <div class="campo">
                         <label>Apellidos</label>
-                        <input class="input-text" type="text" placeholder="Apellidos">
+                        <input class="input-text" id="apellidos" type="text" placeholder="Apellidos">
                     </div>
     
                     <div class="campo">
@@ -61,17 +61,17 @@
     
                     <div class="campo">
                         <label>Correo</label>
-                        <input class="input-text" type="email" placeholder="contabilidad@gmail.com">
+                        <input class="input-text" id="correo" type="email" placeholder="contabilidad@gmail.com">
                     </div>
     
                     <div class="campo">
                         <label>Mensaje</label>
-                        <textarea class="input-text"></textarea>
+                        <textarea class="input-text" id=""mensaje></textarea>
                     </div>
     
                 </div> <!--Contenedor de los campos formulario-->
                 <div class="alinear-derecha flex">
-                    <input class="boton w-100" type="submit" value"Enviar">
+                    <input type="submit" class="boton w-100" value"Enviar">
                 </div>
     
             </fieldset>
@@ -81,7 +81,9 @@
         <footer class="footer">
             <p> © 2023 Contadurias y Asesorias SPA. Todos los derechos reservados.</p>
         </footer>
-        
+
+       <script src="js/modernizr.js"></script>
+       <script src="js/scripts.js"></script> 
 </body>
         
 </html>

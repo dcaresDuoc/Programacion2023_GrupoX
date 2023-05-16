@@ -1,18 +1,52 @@
-const form = document.getElementById('myForm');
+const datos = {
+  nombre: "",
+  apellidos: "",
+  telefono: "",
+  correo: "",
+  mensaje: "",
+};
 
-form.addEventListener('submit', function(event) {
-  event.preventDefault(); // Evita el envío del formulario
+// Variables
 
-  const name = document.getElementById('name').value;
-  const email = document.getElementById('email').value;
-  const message = document.getElementById('message').value;
+const nombre = document.querySelector("#nombre");
+const apellidos = document.querySelector("#apellidos");
+const telefono = document.querySelector("#telefono");
+const correo = document.querySelector("#correo");
+const mensaje = document.querySelector("#mensaje");
+const formulario = document.querySelector(".formulario");
 
-  // Aquí puedes agregar la lógica para procesar los datos del formulario
-  // Por ejemplo, enviar un correo electrónico con los datos
+//EventListener
 
-  console.log(`Nombre: ${name}`);
-  console.log(`Email: ${email}`);
-  console.log(`Mensaje: ${message}`);
+nombre.addEventListener("input", leerTexto);
+apellidos.addEventListener("input", leerTexto);
+telefono.addEventListener("input", leerTexto);
+correo.addEventListener("input", leerTexto);
+mensaje.addEventListener("input", leerTexto);
 
-  form.reset(); // Limpia los campos del formulario después del envío
+// Evento submit
+
+formulario.addEventListener("submit", function (evento) {
+  evento.preventDefault();
+
+  // Validar el formulario
+
+  const { nombre, apellidos, telefono, correo, mensaje } = datos;
+
+  if (nombre === '') {
+    console.log(' El nombre esta vacio flojo');
+
+    return;
+  }
+
+  //Enviar el formulario
+
+  console.log("Enviado Formulario");
 });
+
+// Funciones
+
+function leerTexto(e) {
+  datos[e.target.id] = e.target.value;
+
+  console.log(datos);
+}
