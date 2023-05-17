@@ -74,8 +74,17 @@ function mostrarAlerta(mensaje, error = null) {
     //Efecto desaparecer despues de 5seg
   setTimeout(() => {
     alerta.remove();
+    resetearCampos(); 
   }, 5000);
 
+}
+
+function resetearCampos() {
+  nombre.value = "";
+  apellidos.value = "";
+  telefono.value = "";
+  correo.value = "";
+  mensaje.value = "";
 }
 
 //Funcion de alerta cuando se envia correctamente
