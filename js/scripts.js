@@ -6,7 +6,7 @@ const datos = {
   mensaje: "",
 };
 
-// Variables
+// Variables para el formulario de contacto.html
 
 const nombre = document.querySelector("#nombre");
 const apellidos = document.querySelector("#apellidos");
@@ -15,7 +15,7 @@ const correo = document.querySelector("#correo");
 const mensaje = document.querySelector("#mensaje");
 const formulario = document.querySelector(".formulario");
 
-//EventListener
+//EventListener para formulario de contacto
 
 nombre.addEventListener("input", leerTexto);
 apellidos.addEventListener("input", leerTexto);
@@ -23,10 +23,15 @@ telefono.addEventListener("input", leerTexto);
 correo.addEventListener("input", leerTexto);
 mensaje.addEventListener("input", leerTexto);
 
-// Evento submit
+document.addEventListener("DOMContentLoaded", () => {
+  resetearCampos();
+});
 
-formulario.addEventListener("submit", function (evento) {
+// Evento submit contacto
+
+document.addEventListener("submit", function (evento) {
   evento.preventDefault();
+
 
   // Validar el formulario
 
@@ -46,37 +51,38 @@ formulario.addEventListener("submit", function (evento) {
 
   //Alerta de enviar formulario correctamente
   mostrarAlerta("Mensaje enviado correctamente");
-
-  // console.log("Enviando Formulario");
+  resetearCampos();
 });
 
 // Funciones
 
 function leerTexto(e) {
   datos[e.target.id] = e.target.value;
-
-  // console.log(datos);
 }
 
-//blablablabla
 function mostrarAlerta(mensaje, error = null) {
-  const alerta = document.createElement('P');
+  const alertaExistente = formulario.querySelector(".alerta");
+  if (alertaExistente) {
+    // Si ya existe una alerta, se elimina
+    alertaExistente.remove();
+  }
+
+  const alerta = document.createElement("p");
   alerta.textContent = mensaje;
+  alerta.classList.add("alerta");
 
   if (error) {
-    alerta.classList.add('error');
+    alerta.classList.add("error");
   } else {
-    alerta.classList.add('correcto');
+    alerta.classList.add("correcto");
   }
 
   formulario.appendChild(alerta);
 
-    //Efecto desaparecer despues de 5seg
+  // Efecto desaparecer después de 5 seg
   setTimeout(() => {
     alerta.remove();
-    resetearCampos(); 
   }, 5000);
-
 }
 
 function resetearCampos() {
@@ -85,35 +91,13 @@ function resetearCampos() {
   telefono.value = "";
   correo.value = "";
   mensaje.value = "";
+
+  // También reinicia los valores en el objeto datos
+  datos.nombre = "";
+  datos.apellidos = "";
+  datos.telefono = "";
+  datos.correo = "";
+  datos.mensaje = "";
 }
 
-//Funcion de alerta cuando se envia correctamente
-// function mostrarMensaje(mensaje) {
 
-//   //Efecto des
-//   setTimeout(() => {
-//     alerta.remove();
-//   }, 5000);
-// }
-
-// //Funcion de error en pantalla
-// function mostrarError(mensaje) {
-
-//   //Efecto desaparecer despues de 5seg
-//   setTimeout(() => {
-//     error.remove();
-//   }, 5000);
-// }
-
- //Validaciones de reglas de Negocio
-
-// function validarFormatoCorreoElectronico(correo) {
-//   var formato = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-//   return formato.test(correo);
-// }
-
-// //Uso de la función de validación
-// var email = "correo@example.com";
-// if (!validarFormatoCorreoElectronico(correo)) {
-//   console.log("El correo electrónico no tiene un formato válido.");
-// }

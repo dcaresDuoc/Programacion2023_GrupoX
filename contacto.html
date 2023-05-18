@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Krub:wght@700&display=swap" rel="stylesheet">
     <link rel="preload" href="css/style.css" as="style">
     <link href="css/style.css" rel="stylesheet">
+</head>
 
 <body>
     <header>
@@ -27,63 +28,63 @@
             <a href="contacto.html">Contáctanos</a>
         </nav>
     </div>
-    
-            <div class="iframe-container">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3330.3870609803253!2d-70.5698666881834!3d-33.41315188069361!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf1a617f081b%3A0xf75b547272796d2a!2sWeWork%20Espacio%20de%20Oficinas%20%26%20Coworking%20Apoquindo!5e0!3m2!1ses!2scl!4v1681749213433!5m2!1ses!2scl"
-                width="1360" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-            </div>
 
-    <main class="contenedor sombra">        
+    <div class="iframe-container">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3330.3870609803253!2d-70.5698666881834!3d-33.41315188069361!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf1a617f081b%3A0xf75b547272796d2a!2sWeWork%20Espacio%20de%20Oficinas%20%26%20Coworking%20Apoquindo!5e0!3m2!1ses!2scl!4v1681749213433!5m2!1ses!2scl"
+            width="1360" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+
+    <main class="contenedor sombra">
         <selection id="movete_scroll">
-        <h2>Formulario de Contacto</h2>
-    
-        <form class="formulario">
-            <fieldset>
-                <legend>Completa todos los campos para contactar</legend>
-                <div class="contenedor-campos">
-                    <div class="campo">
-                        <label>Nombre</label>
-                        <input class="input-text" type="text" placeholder="Nombre" id="nombre">
+            <h2>Formulario de Contacto</h2>
+
+            <form class="formulario">
+                <fieldset>
+                    <legend>Completa todos los campos para contactar</legend>
+                    <div class="contenedor-campos">
+                        <div class="campo">
+                            <label>Nombre</label>
+                            <input class="input-text" type="text" placeholder="Nombre" id="nombre">
+                        </div>
+
+                        <div class="campo">
+                            <label>Apellidos</label>
+                            <input class="input-text" type="text" placeholder="Apellidos" id="apellidos">
+                        </div>
+
+                        <div class="campo">
+                            <label>Telefono</label>
+                            <input class="input-text" type="tel" placeholder="+56 9 9999 9999" id="telefono">
+                        </div>
+
+                        <div class="campo">
+                            <label>Correo</label>
+                            <input class="input-text" id="correo" type="email" placeholder="contabilidad@gmail.com">
+                        </div>
+
+                        <div class="campo">
+                            <label>Mensaje</label>
+                            <textarea class="input-text" id="mensaje"></textarea>
+                        </div>
+                    </div> <!--Contenedor de los campos formulario-->
+                    <div class="alinear-derecha flex">
+                        <input type="submit" class="boton w-100" value="Enviar">
                     </div>
-    
-                    <div class="campo">
-                        <label>Apellidos</label>
-                        <input class="input-text" type="text" placeholder="Apellidos" id="apellidos">
-                    </div>
-    
-                    <div class="campo">
-                        <label>Telefono</label>
-                        <input class="input-text" type="tel" placeholder="+56 9 9999 9999" id="telefono">
-                    </div>
-    
-                    <div class="campo">
-                        <label>Correo</label>
-                        <input class="input-text" id="correo" type="email" placeholder="contabilidad@gmail.com">
-                    </div>
-    
-                    <div class="campo">
-                        <label>Mensaje</label>
-                        <textarea class="input-text" id="mensaje"></textarea>
-                    </div>
-    
-                </div> <!--Contenedor de los campos formulario-->
-                <div class="alinear-derecha flex">
-                    <input type="submit" class="boton w-100" value"Enviar">
-                </div>
-    
-            </fieldset>
-        </form>
+                </fieldset>
+            </form>
         </selection>
     </main>
-        <footer class="footer">
-            <p> © 2023 Contadurias y Asesorias SPA. Todos los derechos reservados.</p>
-        </footer>
 
-       <script src="js/modernizr.js"></script>
-       <script src="js/scripts.js"></script> 
+    <footer class="footer">
+        <p> © 2023 Contadurias y Asesorias SPA. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJjLpVVyFUH8kRfG1eh64yg16To4i9yjs"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
-        
+
 </html>
