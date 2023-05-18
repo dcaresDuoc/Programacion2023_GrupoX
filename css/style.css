@@ -6,7 +6,7 @@
     --secundario: #01549D;
     --gris: #717171;
     --grisClaro: #dfe9f3;
-    --grisRojo: #FF0000;
+    --Rojo: #FF0000;
     
 
     /* Como buenas practicas me gusta tener el codigo bien estructurado y comentado
@@ -216,20 +216,20 @@ ya que con media q. se adapta a cualquier medida de pantalla pc,telefono,tablets
 .servicio {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .servicio h3 {
     color: var(--secundario);
     font-weight: normal;
-
 }
 
 .servicio p {
     line-height: 2;
     text-align: center;
-
 }
 
 .servicio .iconos {
@@ -240,7 +240,6 @@ ya que con media q. se adapta a cualquier medida de pantalla pc,telefono,tablets
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-
 }
 
 /** Contacto, Formulario**/
@@ -380,7 +379,7 @@ ya que con media q. se adapta a cualquier medida de pantalla pc,telefono,tablets
 }
 
 .error{
-    background-color: rgb(185, 0, 0);
+    background-color:var(--Rojo);
     text-align: center;
     padding: 1rem;
     color: var(--blanco);

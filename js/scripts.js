@@ -6,7 +6,7 @@ const datos = {
   mensaje: "",
 };
 
-// Variables
+// Variables para el formulario de contacto.html
 
 const nombre = document.querySelector("#nombre");
 const apellidos = document.querySelector("#apellidos");
@@ -15,7 +15,7 @@ const correo = document.querySelector("#correo");
 const mensaje = document.querySelector("#mensaje");
 const formulario = document.querySelector(".formulario");
 
-//EventListener
+//EventListener para formulario de contacto
 
 nombre.addEventListener("input", leerTexto);
 apellidos.addEventListener("input", leerTexto);
@@ -27,10 +27,11 @@ document.addEventListener("DOMContentLoaded", () => {
   resetearCampos();
 });
 
-// Evento submit
+// Evento submit contacto
 
-formulario.addEventListener("submit", function (evento) {
+document.addEventListener("submit", function (evento) {
   evento.preventDefault();
+
 
   // Validar el formulario
 
